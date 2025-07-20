@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator de imagini AI</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="assets/css/style-generator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+    <!-- Link to Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+<meta name="msapplication-TileColor" content="#2d89ef" />
+<meta name="theme-color" content="#ffffff" />
+
+    </head>
+
+ 
+
+<body>
+    <div class="menu-wrapper">
+  <button id="menu-btn">☰ </button>
+  <nav>
+   <ul id="menu-list">
+  <li><a href="index.html">🏠 Acasă</a></li>
+  <li><a href="despre.html">📘 Despre Proiect</a></li>
+  <li><a href="informatii.html">💡 Informații despre AI</a></li>
+  <li><a href="chatbot.html">🤖 ChatBot</a></li>
+  <li><a href="generator-poze.html">🖼️ Generator de Poze</a></li>
+  <li><a href="translate.html">🌍 Traducător</a></li>
+  <li><a href="quiz-ai.html">🧠 Quiz AI</a></li>
+  <li><a href="paint.html">🎨 Paint</a></li>
+  <li><a href="poveste.html">📖 Povestea Interactivă</a></li>
+  <li><a href="contact.html">📩 Contact</a></li>
+</ul>
+
+  </nav>
+</div>
+  <div class="main-wrapper">
+    <div class="info-box pixel-style">
+      <p>⚠️ Acest generator de imagini folosește un API gratuit de la <strong>Vyro.ai</strong> și are o limită zilnică de utilizare.</p>
+      <p>📝 Acceptă doar cereri în <strong>engleză</strong>.</p>
+      <p>🌐 Dacă dorești să scrii într-o altă limbă, te rugăm să folosești traducătorul de pe acest site pentru a-ți transforma cererea în engleză.</p>
+    </div>
+
+
+
+
+    <!-- CONTAINER -->
+    <main class="container">
+        <!-- TITLE -->
+        <h1 class="title">
+           <i class='bx bxs-magic-wand title_icon '></i>
+
+            <span class="title__text">Generator de imagini AI</span>
+        </h1>
+
+        <div class="form-and-image">
+            <!-- FORM CONTAINER -->
+            <section class="form-container">
+                <!-- PROMPT INPUT -->
+                <textarea class="form-container__prompt-input" id="prompt" rows="5"
+                    placeholder="Describe your image..."></textarea>
+                <div class="form-container__dropdown-group">
+                    <!-- DROPDOWN STYLE -->
+                    <select class="form-container__dropdown" id="dropdownStyles">
+                        <option value="realistic">Realistic</option>
+                        <option value="anime">Anime</option>
+                        <option value="flux-schnell">Flux Schnell</option>
+                    </select>
+                    <!-- DROPDOWN RATIO -->
+                    <select class="form-container__dropdown" id="dropdownRatio">
+                        <option value="1:1">1:1</option>
+                        <option value="16:9">16:9</option>
+                        <option value="9:16">9:16</option>
+                    </select>
+                </div>
+                <!-- GENERATE IMAGE BUTTON -->
+                <button class="form-container__button" onclick="generateImage()">
+                    <i class='bx bxs-magic-wand '></i>
+                    Generați imagine
+                </button>
+            </section>
+
+            <!-- IMAGE CONTAINER -->
+            <section class="image-container" id="imageContainer">
+                <!-- IMAGE RESULT -->
+                <img class="image-container__image-result" id="imageResult" src="logo.png">
+
+                <div class="image-container__layer"></div>
+                <button class="image-container__download-button" onclick="downloadImage()">
+                   <i class='bx bxs-download download-icon'></i>
+
+                   
+                </button>
+
+                <!-- LOADING CONTAINER -->
+                <div class="image-container__loading-container">
+                    <svg class="image-container__loading-spinner" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 200 200">
+                        <radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+                            <stop offset="0" stop-color="#2356FF"></stop>
+                            <stop offset=".3" stop-color="#2356FF" stop-opacity=".9"></stop>
+                            <stop offset=".6" stop-color="#2356FF" stop-opacity=".6"></stop>
+                            <stop offset=".8" stop-color="#2356FF" stop-opacity=".3"></stop>
+                            <stop offset="1" stop-color="#2356FF" stop-opacity="0"></stop>
+                        </radialGradient>
+                        <circle transform-origin="center" fill="none" stroke="url(#a12)" stroke-width="20"
+                            stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100"
+                            r="70">
+                            <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2"
+                                values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite">
+                            </animateTransform>
+                        </circle>
+                        <circle transform-origin="center" fill="none" opacity=".2" stroke="#2356FF" stroke-width="20"
+                            stroke-linecap="round" cx="100" cy="100" r="70"></circle>
+                    </svg>
+                    <span class="image-container__loading-text">Generarea imaginii ...</span>
+                </div>
+            </section>
+        </div>
+         </div>
+    </main>
+ 
+
+    <script src="assets/js/script-generator.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <title>Desenează cu Stil!</title>
+  <link rel="stylesheet" href="assets/css/style-paint.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+<meta name="msapplication-TileColor" content="#2d89ef" />
+<meta name="theme-color" content="#ffffff" />
+
+</head>
+<body>
+<div class="menu-wrapper">
+  <button id="menu-btn">☰ </button>
+  <nav>
+   <ul id="menu-list">
+  <li><a href="index.html">🏠 Acasă</a></li>
+  <li><a href="despre.html">📘 Despre Proiect</a></li>
+  <li><a href="informatii.html">💡 Informații despre AI</a></li>
+  <li><a href="chatbot.html">🤖 ChatBot</a></li>
+  <li><a href="generator-poze.html">🖼️ Generator de Poze</a></li>
+  <li><a href="translate.html">🌍 Traducător</a></li>
+  <li><a href="quiz-ai.html">🧠 Quiz AI</a></li>
+  <li><a href="paint.html">🎨 Paint</a></li>
+  <li><a href="poveste.html">📖 Povestea Interactivă</a></li>
+  <li><a href="contact.html">📩 Contact</a></li>
+</ul>
+
+  </nav>
+</div>
+<header>
+
+  🎨 Desenează cu Plăcere! 🚀
+
+
+</header>
+<main>
+
+<div class="toolbar">
+  <select id="toolSelect">
+    <option value="pencil">✏️ Creion</option>
+    <option value="eraser">🧽 Guma</option>
+    <option value="line">📏 Linie</option>
+    <option value="rect">🟩 Pătrat</option>
+    <option value="circle">⚪ Cerc</option>
+    <option value="star">⭐ Stea</option>
+    <option value="diamond">🔷Romb</option>
+    <option value="heart">❤️ Inimioară</option>
+    <option value="robot">🤖 Robot</option>
+    <option value="tree">🌳 Copac</option>
+    <option value="sun">☀️ Soare</option>
+    <option value="fillShape">🪣 Umple Formă</option>
+    <option value="fillCanvas">🪣 Umple Fundal</option>
+  </select>
+
+  <label>Culoare: <input type="color" id="colorPicker" value="#000000"></label>
+  <label>Dimensiune: <input type="range" id="sizeSlider" min="1" max="50" value="5"></label>
+  <span id="sizeValue">5</span>
+
+  <button onclick="undo()">↩️ Undo</button>
+  <button onclick="redo()">↪️ Redo</button>
+  <button onclick="clearCanvas()">🗑️ Șterge tot</button>
+  <button onclick="saveImage()">💾 Salvează</button>
+</div>
+
+<canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+</main>
+
+<script src ="assets/js/script-paint.js"></script>
+</body>
+</html>

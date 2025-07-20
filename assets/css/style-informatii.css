@@ -1,0 +1,931 @@
+/* Font monospace pentru vibe informatic */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  background: #0a0a23; /* albastru închis, aproape negru */
+  color: #3b14ff; /* albastru neon pixel */
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Header cu text pixelat și fundal neon */
+header {
+  background: #001144;
+  color: #2f14ff; /* albastru neon */
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow:
+    0 0 2px #141cff,
+    0 0 5px #145aff,
+    0 0 10px #4314ff;
+  border-bottom: 4px solid #4714ff;
+}
+
+/* Section cu margini pixelate */
+section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  border: 3px solid #1424ff;
+  box-shadow:
+    inset 0 0 0 2px #0a0a23,
+    0 0 15px #141cff;
+  background: #071020;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Titluri cu efect glitch pixel */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4314ff; /* albastru neon mai intens */
+  font-size: 2.2rem;
+  text-shadow:
+    1px 0 red,
+    -1px 0 cyan,
+    0 1px red,
+    0 -1px cyan;
+}
+
+/* Container carduri orizontal, scroll dacă e nevoie */
+.ia-types {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Card pixel neon */
+.type-card {
+  background: transparent;
+  width: 400px;
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+  border: 3px solid #1424ff;
+  border-radius: 0;
+  box-shadow:
+    0 0 10px #1424ff,
+    inset 0 0 5px #0a0a23;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Flip interior */
+.type-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.type-card:hover .type-inner {
+  transform: rotateY(180deg);
+}
+
+/* Fațada front și back */
+.type-front, .type-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid #1c24ff;
+  border-radius: 0;
+  box-shadow: inset 0 0 10px #3714ff;
+  color: #1433ff;
+  font-family: 'Courier New', monospace;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #071020;
+}
+
+/* Front */
+.type-front h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1427ff;
+  text-shadow:
+    1px 0 red,
+    -1px 0 cyan,
+    0 1px red,
+    0 -1px cyan;
+}
+
+.type-front p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Back */
+.type-back {
+  background: #001144;
+  transform: rotateY(180deg);
+  border-color: #4714ff;
+  box-shadow:
+    0 0 20px #1814ff,
+    inset 0 0 15px #0a0a23;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: #a6acf1;
+}
+
+/* Scrollbare pixelate pentru panel */
+.type-back::-webkit-scrollbar {
+  width: 8px;
+}
+.type-back::-webkit-scrollbar-track {
+  background: #071020;
+}
+.type-back::-webkit-scrollbar-thumb {
+  background: #2414ff;
+  border-radius: 0;
+  border: 1px solid #0a0a23;
+}
+
+/* Scrollbar container */
+.ia-types::-webkit-scrollbar {
+  height: 8px;
+}
+.ia-types::-webkit-scrollbar-track {
+  background: #071020;
+}
+.ia-types::-webkit-scrollbar-thumb {
+  background: #1420ff;
+  border-radius: 0;
+  border: 1px solid #0a0a23;
+}
+
+
+/* Acordeon stil pixel neon */
+.accordion {
+  background-color: #071020;
+  color: #4314ff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  border: 2px solid #1814ff;
+  border-radius: 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  box-shadow: 0 0 5px #141cff inset;
+}
+
+.accordion:hover {
+  background-color: #0a0a23;
+  box-shadow: 0 0 15px #147aff;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #071020;
+  overflow: hidden;
+  border-left: 3px solid #4b14ff;
+  margin-bottom: 15px;
+  color: #4714ff;
+  font-family: 'Courier New', monospace;
+}
+
+/* Scrollbare pixelate pentru panel */
+.panel::-webkit-scrollbar {
+  width: 8px;
+}
+.panel::-webkit-scrollbar-track {
+  background: #071020;
+}
+.panel::-webkit-scrollbar-thumb {
+  background: #5714ff;
+  border-radius: 0;
+  border: 1px solid #0a0a23;
+}
+
+/* Scrollbar pentru container carduri orizontale */
+.cards-container::-webkit-scrollbar {
+  height: 8px;
+}
+.cards-container::-webkit-scrollbar-track {
+  background: #071020;
+}
+.cards-container::-webkit-scrollbar-thumb {
+  background: #1418ff;
+  border-radius: 0;
+  border: 1px solid #0a0a23;
+}
+
+/* Responsive text */
+@media(max-width: 600px) {
+  .flip-card, .type-card {
+    width: 90vw;
+    height: auto;
+  }
+  .cards-container {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+/* Buton toggle - acordeon neon pixel */
+.toggle-btn {
+  background-color: #071020;
+  color: #2014ff;
+  cursor: pointer;
+  padding: 18px 1.5rem;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #2414ff;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: inset 0 0 5px #1c14ff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 0;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus {
+  background-color: #0a0a23;
+  box-shadow: 0 0 15px #1c14ff;
+  outline: none;
+}
+/* Content panel - neon pixel */
+.content {
+  background-color: #071020;
+  color: #2014ff;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-left: 3px solid #142fff;
+  margin-bottom: 1.5rem;
+  box-shadow: inset 0 0 8px #1414ff;
+  overflow-y: auto;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  border-radius: 0;
+}
+
+/* Când e activ, arată conținutul */
+.content[hidden] {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-left: none;
+  box-shadow: none;
+}
+
+.content:not([hidden]) {
+  max-height: 400px;
+  opacity: 1;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #1457ff;
+  box-shadow: inset 0 0 8px #141cff;
+}
+
+/* Iconiță mică de săgeată care se rotește */
+.toggle-btn::after {
+  content: '▶';
+  font-size: 1rem;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+  color: #2b14ff;
+  user-select: none;
+}
+
+.toggle-btn[aria-expanded="true"]::after {
+  transform: rotate(90deg);
+}
+
+/* Container taburi */
+.ai-tabs-section {
+  background-color: #071020;
+  border: 2px solid #2014ff;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: #141cff;
+  user-select: none;
+}
+
+/* Butoanele tab */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #141cff #071020;
+}
+
+.tabs::-webkit-scrollbar {
+  height: 8px;
+}
+.tabs::-webkit-scrollbar-track {
+  background: #071020;
+}
+.tabs::-webkit-scrollbar-thumb {
+  background: #1814ff;
+  border-radius: 0;
+  border: 1px solid #0a0a23;
+}
+
+.tab-button {
+  flex: 1;
+  min-width: 100px;
+  background-color: #071020;
+  border: 2px solid #3714ff;
+  color: #1420ff;
+  padding: 12px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 0 5px #141cff;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.tab-button:hover {
+  background-color: #0a0a23;
+  box-shadow: 0 0 15px #1c14ff;
+  outline: none;
+}
+
+.tab-button.active {
+  background-color: #3714ff;
+  color: #071020;
+  box-shadow: 0 0 20px #1414ff;
+  font-weight: bolder;
+  border-color: #2714ff;
+}
+
+/* Conținut tab */
+.tab-content {
+  background-color: #071020;
+  border-left: 3px solid #1433ff;
+  padding: 1rem 1.5rem;
+  box-shadow: inset 0 0 8px #3f14ff;
+  line-height: 1.5;
+  font-size: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  transition: opacity 0.3s ease;
+  color: #145eff;
+}
+
+/* Ascunderea conținutului */
+.tab-content[hidden] {
+  display: none;
+}
+
+/* Scrollbare pixel neon pentru tab-content */
+.tab-content::-webkit-scrollbar {
+  width: 8px;
+}
+.tab-content::-webkit-scrollbar-track {
+  background: #071020;
+}
+.tab-content::-webkit-scrollbar-thumb {
+  background: #2414ff; /* schimbat din verde neon in albastru neon */
+  border-radius: 0;
+  border: 1px solid #0a0a23;
+}
+
+/* Responsive pentru taburi */
+@media (max-width: 600px) {
+  .tabs {
+    flex-wrap: wrap;
+  }
+  .tab-button {
+    flex: 1 1 45%;
+    margin-bottom: 8px;
+  }
+}
+
+/* Timeline etică AI - modificat verdele in albastru neon */
+.ai-ethics-timeline {
+  background-color: #071020;
+  border: 2px solid #2414ff; /* inlocuit #39ff14 cu albastru */
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: #2414ff;
+  user-select: none;
+}
+
+.timeline {
+  border-left: 3px solid #1433ff; /* inlocuit verde */
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -38px;
+  top: 0;
+  background: #2414ff; /* albastru neon */
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  user-select: none;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.3rem;
+  color: #2414ff;
+}
+
+.timeline-content p.detail {
+  margin-top: 0.5rem;
+  background: #141c40;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #c4d0ff;
+}
+
+.timeline-content button.toggle-detail {
+  margin-top: 0.3rem;
+  background: transparent;
+  border: none;
+  color: #2414ff;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  user-select: none;
+}
+
+.timeline-content button.toggle-detail:hover {
+  text-decoration: underline;
+  color: #3f5fff;
+}
+.pixel-ai-training {
+  background-color: #071020;
+  border: 2px solid #2414ff; /* înlocuit verde cu albastru neon */
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: #2414ff; /* albastru neon */
+  user-select: none;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #145eff; /* albastru neon mai luminos */
+  text-shadow: 0 0 8px #3f5fff; /* glow albastru */
+}
+
+.storyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.frame {
+  background: #111;
+  border: 3px solid #3f5fff; /* albastru neon */
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #2433ff; /* neon albastru */
+}
+
+.frame:hover,
+.frame:focus-within {
+  background: #0020cc; /* albastru închis */
+  box-shadow: 0 0 15px #3f5fff;
+}
+
+.pixel-art {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(1px 1px 0 #3f5fff);
+  user-select: none;
+}
+
+h3 {
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
+  color: #145eff;
+}
+
+/* button pixel style */
+.btn-explore {
+  background: #000;
+  border: 2px solid #3f5fff;
+  color: #3f5fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.btn-explore:hover,
+.btn-explore:focus {
+  background: #3f5fff;
+  color: #000;
+  outline: none;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  max-width: 90vw;
+  background: #000;
+  border: 3px solid #3f5fff;
+  border-radius: 8px;
+  padding: 1rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #3f5fff;
+  z-index: 9999;
+  color: #3f5fff;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.btn-close {
+  background: transparent;
+  border: none;
+  color: #3f5fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  align-self: flex-end;
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+}
+
+.pixel-video-section {
+  background-color: #071020;
+  border: 2px solid #2414ff;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: #2414ff;
+  user-select: none;
+}
+
+.pixel-video-section h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #145eff;
+  text-shadow: 0 0 8px #3f5fff;
+  font-size: 1.5rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.video-wrapper {
+  border: 3px solid #3f5fff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background: #111;
+  box-shadow: 0 0 15px #3f5fff;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  filter: drop-shadow(0 0 5px #3f5fff);
+}
+
+.video-wrapper.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #001a66;
+  font-size: 0.9rem;
+  font-style: italic;
+  user-select: none;
+  background: #000d33;
+  border-style: dashed;
+  cursor: default;
+}
+.try-ai-models {
+  padding: 30px;
+  background: #071020; /* fundal albastru închis */
+  color: #145eff; /* text albastru neon */
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  user-select: none;
+}
+
+.try-ai-models h2 {
+  margin-bottom: 20px;
+  font-family: 'Courier New', monospace;
+  color: #3f5fff;
+  text-shadow: 0 0 10px #3f5fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.try-ai-models .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.try-ai-models button {
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #071020; /* text întunecat pentru contrast pe butoanele luminoase */
+  min-width: 150px;
+  font-family: 'Courier New', monospace;
+  user-select: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 0 5px #145eff;
+  background-color: #2433ff; /* albastru neon buton */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.try-ai-models button:hover,
+.try-ai-models button:focus {
+  background-color: #3f5fff;
+  box-shadow: 0 0 15px #3f5fff, inset 0 0 8px #145eff;
+  outline: none;
+  color: #071020;
+}
+
+/* Variante specifice, accent neon pentru fiecare */
+.try-ai-models button.chatbot {
+  background: #145eff;
+  color: #071020;
+  box-shadow: inset 0 0 10px #3f5fff;
+}
+
+.try-ai-models button.chatbot:hover {
+  background: #3f5fff;
+  box-shadow: 0 0 20px #3f5fff;
+  color: #071020;
+}
+
+.try-ai-models button.generator {
+  background: #1c29ff;
+  color: #071020;
+  box-shadow: inset 0 0 10px #506eff;
+}
+
+.try-ai-models button.generator:hover {
+  background: #506eff;
+  box-shadow: 0 0 20px #506eff;
+  color: #071020;
+}
+
+.try-ai-models button.translator {
+  background: #2833ff;
+  color: #071020;
+  box-shadow: inset 0 0 10px #6a7fff;
+}
+
+.try-ai-models button.translator:hover {
+  background: #6a7fff;
+  box-shadow: 0 0 20px #6a7fff;
+  color: #071020;
+}
+.try-ai-models a.chatbot,
+.try-ai-models a.generator,
+.try-ai-models a.translator {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 6px;
+  color: #071020;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #145eff;
+  box-shadow: inset 0 0 10px #3f5fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 150px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.try-ai-models a.chatbot:hover,
+.try-ai-models a.generator:hover,
+.try-ai-models a.translator:hover {
+  background-color: #3f5fff;
+  box-shadow: 0 0 20px #3f5fff;
+  color: #071020;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    text-shadow:
+      1px 0 red,
+      -1px 0 cyan,
+      0 1px red,
+      0 -1px cyan;
+  }
+
+  .type-card {
+    width: 90vw;
+    height: auto;
+    min-height: 250px;
+  }
+
+  .type-inner {
+    padding: 0.8rem;
+  }
+
+  .type-front h3 {
+    font-size: 1.2rem;
+  }
+
+  .type-front p {
+    font-size: 0.95rem;
+  }
+
+  .type-back {
+    font-size: 0.85rem;
+  }
+
+  .ia-types {
+    gap: 16px;
+    padding-bottom: 8px;
+  }
+
+  .type-card,
+  .type-front,
+  .type-back {
+    border-width: 2px;
+  }
+
+  header {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .type-back::-webkit-scrollbar,
+  .ia-types::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  .type-back::-webkit-scrollbar-thumb,
+  .ia-types::-webkit-scrollbar-thumb {
+    background: #2c3eff;
+  }
+}
+.menu-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#menu-btn {
+  font-size: 14px;
+  padding: 10px 18px;
+  background: #001f3f;
+  border: 3px solid #0050ff;
+  color: #66ccff;
+  cursor: pointer;
+  box-shadow: 0 0 8px #0050ff;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+#menu-btn:hover {
+  background: #003f7f;
+  color: #00f0ff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: #001a33;
+  border: 3px solid #0050ff;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 15px #0050ff;
+}
+
+nav ul.show {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #66ccff;
+  text-decoration: none;
+  border-bottom: 1px solid #0050ff;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li a:hover {
+  background: #003366;
+  color: #00eaff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #menu-btn {
+    font-size: 20px;
+    padding: 7px 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+}
+nav ul li a.active {
+  background-color: #003366;
+  color: #00eaff;
+  font-weight: bold;
+}

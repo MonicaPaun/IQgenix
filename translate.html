@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>TranslaIQ</title>
+    <link rel="stylesheet" href="assets/css/translate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+       <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+<meta name="msapplication-TileColor" content="#2d89ef" />
+<meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+   <div class="menu-wrapper">
+  <button id="menu-btn">☰ </button>
+  <nav>
+   <ul id="menu-list">
+  <li><a href="index.html">🏠 Acasă</a></li>
+  <li><a href="despre.html">📘 Despre Proiect</a></li>
+  <li><a href="informatii.html">💡 Informații despre AI</a></li>
+  <li><a href="chatbot.html">🤖 ChatBot</a></li>
+  <li><a href="generator-poze.html">🖼️ Generator de Poze</a></li>
+  <li><a href="translate.html">🌍 Traducător</a></li>
+  <li><a href="quiz-ai.html">🧠 Quiz AI</a></li>
+  <li><a href="paint.html">🎨 Paint</a></li>
+  <li><a href="poveste.html">📖 Povestea Interactivă</a></li>
+  <li><a href="contact.html">📩 Contact</a></li>
+</ul>
+
+  </nav>
+</div>
+  <div class="header">
+  <img src="assets/poze/TranslaIQ.png" alt="Logo">
+  <h1>TranslaIQ</h1>
+</div>
+
+<div class="info-box pixel-style">
+  <p>🌍 Acest traducător folosește un API gratuit de la <strong>MyMemory</strong>.</p>
+  <p>🔁 Poți traduce textele în orice limbă dorești.</p>
+  <p>💡 Te poți folosi de el pentru a converti cererile în <strong>engleză</strong>, dacă vrei să generezi imagini.</p>
+</div>
+ <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+<button id="translate-btn">Translate Text</button>
+
+    </div>
+    <script src="assets/js/countries.js"></script>
+    <script src="assets/js/script_translate.js"></script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #001634;
+  font-family: 'Press Start 2P', monospace;
+  color: #8ecaff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  background: #003d99;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 18px 10px;
+  text-shadow: 2px 2px 0 #000;
+  box-shadow: 0 4px 0 #000c3f;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #0055cc;
+}
+
+/* MAIN LAYOUT */
+main {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  background: #00254c;
+  padding: 16px;
+  gap: 12px;
+  width: 230px;
+  border-right: 4px solid #00407f;
+  color: #b3e1ff;
+  overflow-y: auto;
+}
+
+.toolbar label {
+  font-size: 10px;
+  color: #a3d1ff;
+}
+
+.toolbar button,
+.toolbar select,
+.toolbar input[type="range"],
+.toolbar input[type="color"] {
+  background: #0055cc;
+  color: #ffffff;
+  border: 3px solid #79baff;
+  padding: 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  box-shadow: 3px 3px 0 #000;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.toolbar button:hover {
+  background: #007fff;
+  transform: translateY(-1px);
+}
+
+/* CANVAS */
+canvas {
+  flex-grow: 1;
+  margin: 10px;
+  background: white;
+  border: 5px solid #0058cc;
+  box-shadow: 0 0 25px rgba(0, 85, 204, 0.5);
+  border-radius: 0;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* MENU BUTTON */
+#menu-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  background: #003380;
+  color: #b3e6ff;
+  border: 3px solid #66aaff;
+  font-family: 'Press Start 2P', monospace;
+  padding: 8px 12px;
+  z-index: 1100;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+}
+
+#menu-btn:hover {
+  background: #0055cc;
+  color: #fff;
+}
+
+/* DROPDOWN MENU */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  background: #00264d;
+  border: 3px solid #0055cc;
+  box-shadow: 3px 3px 0 #000;
+  z-index: 1050;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.2s ease;
+  width: 180px;
+}
+
+nav ul.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 16px;
+  font-size: 10px;
+  color: #b3e6ff;
+  text-decoration: none;
+  border-bottom: 1px solid #004080;
+  font-family: 'Press Start 2P', monospace;
+}
+
+nav ul li a:hover {
+  background: #005fcc;
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  background: #003d80;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-right: none;
+    border-bottom: 4px solid #00407f;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  canvas {
+    margin: 10px auto;
+    max-width: 95%;
+    max-height: 60vh;
+  }
+
+
+}
+.menu-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#menu-btn {
+  font-size: 14px;
+  padding: 10px 18px;
+  background: #001f3f;
+  border: 3px solid #0050ff;
+  color: #66ccff;
+  cursor: pointer;
+  box-shadow: 0 0 8px #0050ff;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+#menu-btn:hover {
+  background: #003f7f;
+  color: #00f0ff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: #001a33;
+  border: 3px solid #0050ff;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 15px #0050ff;
+}
+
+nav ul.show {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #66ccff;
+  text-decoration: none;
+  border-bottom: 1px solid #0050ff;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li a:hover {
+  background: #003366;
+  color: #00eaff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #menu-btn {
+    font-size: 20px;
+    padding: 7px 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+}
+nav ul li a.active {
+  background-color: #003366;
+  color: #00eaff;
+  font-weight: bold;
+}
+

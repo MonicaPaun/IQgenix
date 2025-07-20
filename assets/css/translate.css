@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', monospace;
+  image-rendering: pixelated;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #001a2e, #002b45, #001f33);
+  color: #66ccff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  background: #001f3f;
+  padding: 6px;
+  border: 4px solid #0050ff;
+  box-shadow: 0 0 10px #0050ff;
+}
+
+.header h1 {
+  font-size: 18px;
+  color: #66ccff;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow:
+    2px 0 #0050ff,
+   -2px 0 #0050ff,
+    0 2px #0050ff,
+    0 -2px #0050ff;
+}
+
+.pixel-style {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  background: #001820;
+  color: #66ccff;
+  padding: 18px;
+  border: 4px solid #0050ff;
+  box-shadow: 0 0 10px #0050ff;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 25px;
+  image-rendering: pixelated;
+}
+
+.pixel-style strong {
+  color: #0099ff;
+}
+
+
+.container {
+  max-width: 720px;
+  width: 100%;
+  padding: 36px;
+  background: #001d2f;
+  border: 4px solid #0050ff;
+  box-shadow: 0 0 12px #0050ff;
+}
+
+.wrapper {
+  background: #001f33;
+  border: 3px solid #004080;
+}
+
+.wrapper .text-input {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #004080;
+}
+
+.text-input textarea {
+  flex: 1;
+  height: 220px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: #002641;
+  font-size: 12px;
+  padding: 16px;
+  color: #cceeff;
+  border-right: 3px solid #004080;
+}
+
+.text-input .to-text {
+  border-left: none;
+}
+
+.text-input textarea:focus {
+  background: #002e50;
+}
+
+.text-input textarea::placeholder {
+  color: #6699cc;
+  font-style: italic;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #001d2f;
+  border-top: 3px solid #004080;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls .row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.controls .row .icons i {
+  width: 38px;
+  height: 38px;
+  background: #002e50;
+  color: #66ccff;
+   font-size: 12px;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.controls .row .icons i:hover {
+  color: #99e0ff;
+  background: #003a66;
+}
+
+.controls .exchange {
+  color: #66ccff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.controls .exchange:hover {
+  color: #99e0ff;
+}
+
+.controls select {
+  font-size: 12px;
+  background: #001f33;
+  color: #66ccff;
+  border: 2px solid #0050ff;
+  padding: 4px 10px;
+}
+
+.container button {
+  width: 100%;
+  padding: 15px 20px;
+  margin-top: 25px;
+  background: linear-gradient(135deg, #0050ff, #0099ff);
+  border: 3px solid #004080;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #0050ff;
+}
+
+.container button:hover {
+  background: linear-gradient(135deg, #0040e0, #0080e0);
+}
+
+.text-input textarea::-webkit-scrollbar {
+  width: 6px;
+}
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #004080;
+}
+.text-input textarea::-webkit-scrollbar-track {
+  background: #001f33;
+}
+
+@media (max-width: 660px) {
+  .container {
+    padding: 20px;
+  }
+
+  .wrapper .text-input {
+    flex-direction: column;
+  }
+
+  .text-input textarea {
+    height: 180px;
+    border-right: none;
+    border-bottom: 3px solid #004080;
+  }
+
+  .controls {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .controls .exchange {
+    font-size: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.menu-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#menu-btn {
+  font-size: 14px;
+  padding: 10px 18px;
+  background: #001f3f;
+  border: 3px solid #0050ff;
+  color: #66ccff;
+  cursor: pointer;
+  box-shadow: 0 0 8px #0050ff;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+#menu-btn:hover {
+  background: #003f7f;
+  color: #00f0ff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: #001a33;
+  border: 3px solid #0050ff;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 15px #0050ff;
+}
+
+nav ul.show {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #66ccff;
+  text-decoration: none;
+  border-bottom: 1px solid #0050ff;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li a:hover {
+  background: #003366;
+  color: #00eaff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #menu-btn {
+    font-size: 20px;
+    padding: 7px 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+}
+nav ul li a.active {
+  background-color: #003366;
+  color: #00eaff;
+  font-weight: bold;
+}

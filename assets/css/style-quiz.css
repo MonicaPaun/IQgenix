@@ -1,0 +1,353 @@
+/* Import font pixel art din Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  /* Reset și font */
+body {
+  font-family: 'Press Start 2P', cursive, monospace;
+  background: #001f3f;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #cce6ff;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+h1 {
+  font-family: 'Press Start 2P', cursive, monospace;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: pixelated;
+  text-shadow: 2px 2px 0 #003366;
+  font-size: 2rem;
+  color: #66ccff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/* Container test */
+.test-container {
+  background: #003366;
+  border: 4px solid #3399ff;
+  border-radius: 0;
+  padding: 30px 30px;
+  box-shadow: 6px 6px 0 #001933;
+  max-width: 700px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+/* Întrebări */
+.question {
+  margin-bottom: 20px;
+}
+.question h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0059ff;
+  text-shadow: 1px 1px 0 #001933;
+  letter-spacing: 2px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #cce6ff;
+  user-select: none;
+  text-shadow: 1px 1px 0 #001933;
+  letter-spacing: 1.7px;
+}
+/* Hover când treci cu mouse-ul peste un răspuns */
+label:hover {
+  background-color: #5577cc; /* un albastru deschis pentru hover */
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Stil pentru răspunsul selectat (persistent) */
+label.selected {
+  background-color: #3399ff; /* albastru mai închis pentru selectat */
+  color: white;
+  font-weight: 700;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 0 #001933);
+}
+
+/* Gen + nume */
+.user-inputs {
+  margin-bottom: 25px;
+  color: #66ccff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+}
+.user-inputs label {
+  margin-right: 20px;
+}
+input[type="text"] {
+  padding: 8px 12px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.85rem;
+  border-radius: 0;
+  border: 3px solid #3399ff;
+  background: #001f3f;
+  color: #99ccff;
+  width: 250px;
+  margin-left: 10px;
+  box-shadow: inset 2px 2px 0 #003366;
+  outline: none;
+}
+input[type="text"]:focus {
+  border-color: #66ccff;
+  box-shadow: 0 0 6px #66ccff;
+}
+
+/* Buton */
+button {
+  padding: 14px 30px;
+  font-size: 0.9rem;
+  background: #3399ff;
+  color: #001933;
+  border: 4px solid #003366;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 0 #001933;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+  background: #66ccff;
+  box-shadow: 8px 8px 0 #001933;
+}
+
+  /* Diploma */
+  .diploma {
+    width: 680px;
+    max-width: 90vw;
+    min-height: 320px;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    font-family: 'Georgia', serif;
+    user-select: none;
+    margin-bottom: 10px;
+  }
+  .diploma h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 900;
+  }
+  .diploma p {
+    font-size: 22px;
+    text-align: center;
+    margin: 18px 0 30px 0;
+    font-style: italic;
+  }
+  .diploma .name {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1.3px;
+  }
+  .diploma .footer {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* Elemente decorative fete */
+  .diploma.female::before, .diploma.female::after {
+    content: '✿ ✿ ✿';
+    font-size: 22px;
+    position: absolute;
+    color: #ffd1e8;
+  }
+  .diploma.female::before {
+    top: 15px;
+    left: 20px;
+  }
+  .diploma.female::after {
+    bottom: 15px;
+    right: 20px;
+  }
+
+  /* Elemente decorative băieți */
+  .diploma.male::before, .diploma.male::after {
+    content: '★ ★ ★';
+    font-size: 24px;
+    position: absolute;
+    color: #b0d6ff;
+  }
+  .diploma.male::before {
+    top: 20px;
+    right: 25px;
+  }
+  .diploma.male::after {
+    bottom: 18px;
+    left: 25px;
+  }
+
+  /* Culori diplome */
+  .diploma.female {
+    background: linear-gradient(135deg, #ff7ecb, #ff4f9c);
+    box-shadow: 0 8px 30px rgba(255, 80, 140, 0.6);
+  }
+  .diploma.male {
+    background: linear-gradient(135deg, #4a90e2, #2a62b8);
+    box-shadow: 0 8px 30px rgba(42, 98, 184, 0.7);
+  }
+/* Mesaj eroare */
+.error {
+  color: #ff5555;
+  background-color: #330000;
+  padding: 12px 18px;
+  margin-bottom: 20px;
+  border-radius: 0;
+  max-width: 700px;
+  width: 90%;
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 0 #330000;
+}
+
+/* Buton descărcare */
+#downloadBtn {
+  display: none;
+  margin-top: 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 700;
+  padding: 12px 20px;
+  background: #3399ff;
+  border: 4px solid #003366;
+  color: #001933;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #001933;
+  text-transform: uppercase;
+}
+#downloadBtn:hover {
+  background: #66ccff;
+  box-shadow: 8px 8px 0 #001933;
+}
+
+/* Explicații */
+.explanation {
+  background-color: #004080;
+  color: #cce6ff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  margin-top: 10px;
+  border-left: 6px solid #66ccff;
+  border-radius: 0;
+  max-width: 600px;
+  line-height: 1.5;
+  user-select: text;
+  text-shadow: 1px 1px 0 #001933;
+}
+
+
+.menu-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#menu-btn {
+  font-size: 14px;
+  padding: 10px 18px;
+  background: #001f3f;
+  border: 3px solid #0050ff;
+  color: #66ccff;
+  cursor: pointer;
+  box-shadow: 0 0 8px #0050ff;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+#menu-btn:hover {
+  background: #003f7f;
+  color: #00f0ff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: #001a33;
+  border: 3px solid #0050ff;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 15px #0050ff;
+}
+
+nav ul.show {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #66ccff;
+  text-decoration: none;
+  border-bottom: 1px solid #0050ff;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li a:hover {
+  background: #003366;
+  color: #00eaff;
+}
+
+/* Responsive */
+@media (max-width:600px) {
+  #menu-btn {
+    font-size: 20px;
+    padding: 7px 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+
+   h1 {
+    font-size: 1.2rem; 
+    text-shadow: 1px 1px 0 #003366;
+  }
+}
+nav ul li a.active {
+  background-color: #003366;
+  color: #00eaff;
+  font-weight: bold;
+}

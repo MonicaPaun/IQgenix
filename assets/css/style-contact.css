@@ -1,0 +1,249 @@
+/* Reset & Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace; /* pixel font */
+  background: linear-gradient(135deg, #003366, #0066cc);
+  color: #99ccff;
+  text-align: center;
+  user-select: none;
+}
+
+.container {
+  height: 1800px; 
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 51, 0.8);
+  border-radius: 0;
+  border: 4px solid #3399ff;
+  box-shadow:
+    inset 3px 3px 0 #0055cc,
+    5px 5px 0 #002244;
+  overflow: visible; /* ca să nu ascundă conținutul */
+}
+
+
+/* Headings */
+h1 {
+  font-size: 2.5rem; /* responsive font */
+  margin-bottom: 20px;
+  color: #66b2ff;
+  text-shadow:
+    2px 2px 0 #003366,
+   -2px -2px 0 #003366;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #a0c8ff;
+  line-height: 1.4;
+}
+
+/* iframe */
+iframe {
+  width: 100%;
+  height: 1600px;
+  border: 4px solid #3399ff;
+  border-radius: 0;
+  box-shadow:
+    4px 4px 0 #003366;
+  image-rendering: pixelated;
+}
+
+/* Fixed Menu Container */
+#menu-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  border: 4px solid #3399ff;
+  background: #002244;
+  box-shadow:
+    3px 3px 0 #0055cc,
+    -3px -3px 0 #001122;
+  border-radius: 0;
+  user-select: none;
+}
+
+/* Menu Button */
+#menu-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #99ccff;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+  user-select: none;
+  outline: none;
+}
+
+#menu-btn:hover {
+  color: #33bbff;
+}
+
+/* Dropdown Menu */
+nav ul {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  background: #004080;
+  position: fixed;
+  top: 58px;
+  left: 10px;
+  border-radius: 0;
+  width: 180px;
+  box-shadow:
+    3px 3px 0 #0073e6,
+    -3px -3px 0 #00264d;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1050;
+  font-size: 12px;
+}
+
+nav ul.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  color: #99ccff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: background 0.3s ease, border-bottom 0.3s ease;
+  user-select: none;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li a:hover {
+  background: #3399ff;
+  border-bottom: 2px solid #66ccff;
+  color: #002244;
+}
+
+nav ul li a.active {
+  background: #66b2ff;
+  border-bottom: 2px solid #002244;
+  color: #001f33;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  iframe {
+    height: 1600px;
+  }
+  nav ul {
+    width: 140px;
+    font-size: 10px;
+  }
+  #menu-btn {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+}
+.menu-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#menu-btn {
+  font-size: 14px;
+  padding: 10px 18px;
+  background: #001f3f;
+  border: 3px solid #0050ff;
+  color: #66ccff;
+  cursor: pointer;
+  box-shadow: 0 0 8px #0050ff;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+#menu-btn:hover {
+  background: #003f7f;
+  color: #00f0ff;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  background: #001a33;
+  border: 3px solid #0050ff;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 15px #0050ff;
+}
+
+nav ul.show {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 18px;
+  color: #66ccff;
+  text-decoration: none;
+  border-bottom: 1px solid #0050ff;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+nav ul li a:hover {
+  background: #003366;
+  color: #00eaff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #menu-btn {
+    font-size: 20px;
+    padding: 7px 11px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li a {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+}
+nav ul li a.active {
+  background-color: #003366;
+  color: #00eaff;
+  font-weight: bold;
+}

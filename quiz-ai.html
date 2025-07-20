@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Test Inteligență Artificială & Diplomă</title>
+ <link rel="stylesheet" href="assets/css/style-quiz.css" />
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+<meta name="msapplication-TileColor" content="#2d89ef" />
+<meta name="theme-color" content="#ffffff" />
+</head>
+<body>
+<div class="menu-wrapper">
+  <button id="menu-btn">☰ </button>
+  <nav>
+   <ul id="menu-list">
+  <li><a href="index.html">🏠 Acasă</a></li>
+  <li><a href="despre.html">📘 Despre Proiect</a></li>
+  <li><a href="informatii.html">💡 Informații despre AI</a></li>
+  <li><a href="chatbot.html">🤖 ChatBot</a></li>
+  <li><a href="generator-poze.html">🖼️ Generator de Poze</a></li>
+  <li><a href="translate.html">🌍 Traducător</a></li>
+  <li><a href="quiz-ai.html">🧠 Quiz AI</a></li>
+  <li><a href="paint.html">🎨 Paint</a></li>
+  <li><a href="poveste.html">📖 Povestea Interactivă</a></li>
+  <li><a href="contact.html">📩 Contact</a></li>
+</ul>
+
+  </nav>
+</div>
+<h1>Test Inteligență Artificială </h1>
+
+<div class="test-container">
+  <div class="user-inputs">
+    <label for="name">Numele tău:</label>
+    <input type="text" id="name" placeholder="Ex: Monica" />
+
+    <label>Gen:</label>
+    <label><input type="radio" name="gender" value="female" /> Femeie</label>
+    <label><input type="radio" name="gender" value="male" /> Bărbat</label>
+  </div>
+
+<form id="quizForm">
+  <div class="question">
+    <h3>1. Care este esența diferenței dintre IA îngustă și IA generală?</h3>
+    <label><input type="radio" name="q1" value="a" /> IA îngustă este specializată pentru sarcini specifice, pe când IA generală poate extrapola cunoștințe pentru sarcini diverse și necunoscute anterior.</label> <!-- corect -->
+    <label><input type="radio" name="q1" value="b" /> IA îngustă poate învăța din experiență, în timp ce IA generală nu.</label>
+    <label><input type="radio" name="q1" value="c" /> IA generală este folosită doar în robotică, iar IA îngustă în software.</label>
+    <label><input type="radio" name="q1" value="d" /> IA generală este doar o formă de IA îngustă cu putere mai mare.</label>
+  </div>
+
+  <div class="question">
+    <h3>2. În ce mod rețelele neuronale diferă de modelele tradiționale de programare?</h3>
+    <label><input type="radio" name="q2" value="a" /> Ele funcționează pe baza unor reguli rigide scrise manual.</label>
+    <label><input type="radio" name="q2" value="b" /> Ele procesează informația în straturi interconectate și se ajustează automat pentru a recunoaște tipare complexe.</label> <!-- corect -->
+    <label><input type="radio" name="q2" value="c" /> Ele sunt doar un tip de interfață grafică.</label>
+    <label><input type="radio" name="q2" value="d" /> Ele nu pot face predicții, doar stochează date.</label>
+  </div>
+
+  <div class="question">
+    <h3>3. Ce rol joacă transparența și IA explicabilă în adoptarea inteligenței artificiale?</h3>
+    <label><input type="radio" name="q3" value="a" /> Ele accelerează viteza de procesare a datelor.</label>
+    <label><input type="radio" name="q3" value="b" /> Ele reduc consumul de energie.</label>
+    <label><input type="radio" name="q3" value="c" /> Ele permit IA să înlocuiască complet oamenii în decizii.</label>
+    <label><input type="radio" name="q3" value="d" /> Ele cresc încrederea prin oferirea de explicații clare pentru deciziile luate de sisteme AI.</label> <!-- corect -->
+  </div>
+
+  <div class="question">
+    <h3>4. Care este o caracteristică definitorie a IA superinteligente, în teorie?</h3>
+    <label><input type="radio" name="q4" value="a" /> Capacitatea de a-și îmbunătăți singură performanța și de a depăși inteligența umană.</label> <!-- corect -->
+    <label><input type="radio" name="q4" value="b" /> Nevoia constantă de supraveghere umană pentru fiecare decizie.</label>
+    <label><input type="radio" name="q4" value="c" /> Utilizarea exclusivă în jocuri video.</label>
+    <label><input type="radio" name="q4" value="d" /> Limitarea la un domeniu specific de aplicare.</label>
+  </div>
+
+  <div class="question">
+    <h3>5. Care este un risc major legat de „prejudecăți AI” în aplicațiile reale?</h3>
+    <label><input type="radio" name="q5" value="a" /> Scăderea performanței hardware-ului.</label>
+    <label><input type="radio" name="q5" value="b" /> Consum excesiv de memorie.</label>
+    <label><input type="radio" name="q5" value="c" /> Amplificarea părtinirilor din date, ducând la decizii nedrepte pentru anumite grupuri.</label> <!-- corect -->
+    <label><input type="radio" name="q5" value="d" /> Pierderea conectivității la internet.</label>
+  </div>
+
+  <div class="question">
+    <h3>6. Cum funcționează un sistem de Machine Learning?</h3>
+    <label><input type="radio" name="q6" value="a" /> Prin crearea manuală a tuturor regulilor de funcționare.</label>
+    <label><input type="radio" name="q6" value="b" /> Prin analizarea datelor și ajustarea algoritmilor pentru a se adapta și a îmbunătăți performanța fără programare explicită.</label> <!-- corect -->
+    <label><input type="radio" name="q6" value="c" /> Prin stocarea exclusivă a datelor fără procesare.</label>
+    <label><input type="radio" name="q6" value="d" /> Prin utilizarea unui singur tip de algoritm pentru toate sarcinile.</label>
+  </div>
+
+  <div class="question">
+    <h3>7. Ce beneficii majore aduce integrarea AI în mediul de afaceri?</h3>
+    <label><input type="radio" name="q7" value="a" /> Creșterea eficienței, automatizarea sarcinilor repetitive și suportul deciziilor bazate pe date.</label> <!-- corect -->
+    <label><input type="radio" name="q7" value="b" /> Transformarea tuturor produselor în software.</label>
+    <label><input type="radio" name="q7" value="c" /> Eliminarea completă a angajaților din companii.</label>
+    <label><input type="radio" name="q7" value="d" /> Reducerea tuturor costurilor la zero.</label>
+  </div>
+
+  <div class="question">
+    <h3>8. Ce caracterizează un sistem de inteligență artificială de tip IA generală (IA puternică)?</h3>
+    <label><input type="radio" name="q8" value="a" /> Funcționarea fără nevoie de date antrenate</label>
+    <label><input type="radio" name="q8" value="b" />Capacitatea de a crea conținut nou pe baza datelor antrenate</label>
+    <label><input type="radio" name="q8" value="c" /> Performanța exclusiv în sarcini specializate, fără conștiință de sine</label>
+    <label><input type="radio" name="q8" value="d" />  Capacitatea de a îndeplini orice sarcină intelectuală umană, inclusiv extrapolarea cunoștințelor în contexte noi</label> <!-- corect -->
+  </div>
+
+  <div class="question">
+    <h3>9. Ce rol are transparența în etica inteligenței artificiale?</h3>
+    <label><input type="radio" name="q9" value="a" /> Oferă acces nelimitat la date personale</label>
+    <label><input type="radio" name="q9" value="b" /> Crește încrederea utilizatorilor prin oferirea de explicații clare despre deciziile AI</label> <!-- corect -->
+    <label><input type="radio" name="q9" value="c" /> Reduce capacitatea AI de a lua decizii rapide</label>
+    <label><input type="radio" name="q9" value="d" /> Este o metodă de a ascunde erorile AI</label>
+  </div>
+
+  <div class="question">
+    <h3>10. Ce avantaje oferă utilizarea inteligenței artificiale în domeniul sănătății?</h3>
+    <label><input type="radio" name="q10" value="a" /> Reducerea accesului pacienților la informații medicale</label>
+    <label><input type="radio" name="q10" value="b" /> Înlocuirea completă a medicilor în procesul decizional</label>
+    <label><input type="radio" name="q10" value="c" /> Susținerea diagnosticului precis și optimizarea fluxurilor operaționale</label> <!-- corect -->
+    <label><input type="radio" name="q10" value="d" /> Limitarea analizei datelor medicale complexe</label>
+  </div>
+
+  <button type="submit">Trimite răspunsurile și vezi diploma</button>
+</form>
+
+
+
+  <div id="errorMsg" class="error" style="display:none;"></div>
+</div>
+
+<!-- Diploma -->
+<div id="diploma" class="diploma" style="display:none;">
+  <h2>Diplomă de Merit pentru</h2>
+  <div class="name"></div>
+  <p class="text"></p>
+  <div class="footer">Felicitări pentru efort și cunoștințe!</div>
+</div>
+
+<button id="downloadBtn">Descarcă Diploma ca Imagine</button>
+
+<!-- html2canvas - CDN -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
+  <script src="assets/js/script-quiz.js"></script>
+</body>
+</html>
